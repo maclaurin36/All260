@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background: url('/learndesign/images/Arch.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00000036;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-secondary {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar li a, .navbar-primary {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right:15px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-right: 1000px;
+}
+
+.content a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    background-color: #e16505;
+    border-radius: 20px;
+}
+
+.row-content {
+    height: 500px;
+}
+
+.content p {
+    color: #fff;
+    font-size: 25px;
+    width: 300px;
+    padding:  50px;
+}

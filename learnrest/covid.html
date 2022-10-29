@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID</title>
+    </head>
+    <body>
+        <input type="button" id="request-button" value='Send Request'/>
+        <ul id='count-list'>
+            
+        </ul>
+    </body>
+    <script>
+        const button = document.getElementById('request-button');
+        button.addEventListener('click', updateButton);
+        
+        function updateButton() {
+            fetch('https://api.covidtracking.com/v2/us/daily.json')
+            .then((data) => {
+                return data.json();
+            })
+            .then((body) => {
+                let myList = document.getElementById('count-list');
+                console.log(body.data);
+                body.data.forEach((dataPoint) => {
+                    let myString = "Date: " + dataPoint.date + " Cases: " + dataPoint.cases.total.value;
+                    let myListItem = document.createElement("li");
+                    myListItem.innerText = myString;
+                    myList.appendChild(myListItem);
+                });
+            })
+        }
+    </script>
+</html>
